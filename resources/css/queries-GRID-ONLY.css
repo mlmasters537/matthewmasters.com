@@ -1,0 +1,244 @@
+/* TABLETS: from 768px to 1023px -------------------------------------------- */
+/* LANDSCAPE MODE ----------------------------------------------------------- */
+/* 4K 3840 × 2160 (1536 by 2048) -------------------------------------------- */
+
+@media only screen and (min-width: 3840px) {
+
+        .grid {
+            display: grid;
+            grid-template-columns: 33.3% 33.3% 33.3%;
+            }
+
+        .grid > div {
+            width: 60%;
+            } 
+
+
+        .item {
+            margin: 3%;
+            margin-bottom: 12%;
+        }
+
+        html,
+        body {
+            font-size: 24px;
+        }
+    
+    
+    
+    }
+
+
+
+/* Big tablet to 1920px (widths smaller than the 1140px row) */
+@media only screen and (max-width: 3839px) {
+
+
+
+/* Big tablet to 1920px (widths smaller than the 1140px row) */
+@media only screen and (max-width: 2559px) {
+
+        .grid {
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            /* border-bottom: 2px solid #333; */
+        }
+
+    }
+
+
+
+/* Big tablet to 1200px (widths smaller taht the 1140px row) */
+
+@media only screen and (max-width: 1200px) {
+
+        .grid {
+        display: grid;
+            grid-template-columns: 33.3% 33.3% 33.3%;
+        }
+
+    }
+
+
+
+/* TABLETS: from 768px to 1023px -------------------------------------------- */
+/* LANDSCAPE MODE ----------------------------------------------------------- */
+/* IPAD AIR 1024 x 768 (1536 by 2048) --------------------------------------- */
+/* Small tablet to big tablet: from 768px to 1023px */
+
+@media only screen and (max-width: 1023px) {
+
+        .grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        }
+    
+        .grid > div {
+        width: 100%;
+        margin: 0;
+        }
+ 
+        .section-anchor1 {
+        top: 45%;
+        }
+
+        .hero-text-box {
+        width: 80%;
+        top: 25%;
+        }   
+    
+    
+        #homeheader {
+        height: 50vh;
+        width: 100%;
+        background-size: 200%;
+        background-position: top;
+        background-repeat: no-repeat;
+        }    
+
+        #mozarts {
+        height: 50vh;
+        background-size: 120%;
+        background-position: top;
+        background-repeat: no-repeat;
+        }    
+
+        #myFitFoods {
+        height: 50vh;
+        background-size: 120%;
+        background-position: top;
+        background-repeat: no-repeat;
+        }    
+
+        #twixel {
+        height: 50vh;
+        background-size: 120%;
+        background-position: top;
+        background-repeat: no-repeat;
+        }    
+
+        #theSystem {
+        height: 50vh;
+        background-size: 120%;
+        background-position: top;
+        background-repeat: no-repeat;
+        }    
+
+        #visual {
+        height: 50vh;
+        background-size: 120%;
+        background-position: top;
+        background-repeat: no-repeat;
+        }    
+
+        #canvaswines {
+        height: 50vh;
+        background-size: 120%;
+        background-position: top;
+        background-repeat: no-repeat;
+        }    
+
+        #dsr {
+        height: 50vh;
+        background-size: 120%;
+        background-position: top;
+        background-repeat: no-repeat;
+        }    
+
+        #post {
+        height: 50vh;
+        background-size: 120%;
+        background-position: top;
+        background-repeat: no-repeat;
+        }    
+
+        #threeamigos {
+        height: 50vh;
+        background-size: 120%;
+        background-position: top;
+        background-repeat: no-repeat;
+        }    
+
+        #HistoryOfType {
+        height: 50vh;
+        background-size: 120%;
+        background-position: top;
+        background-repeat: no-repeat;
+        }    
+
+        #morphine {
+        height: 50vh;
+        background-size: 120%;
+        background-position: top;
+        background-repeat: no-repeat;
+        }    
+
+
+    }
+
+
+
+/* TABLETS: from 480px to 768px -------------------------------------------- */
+/* PORTRAIT MODE ----------------------------------------------------------- */
+/* IPAD AIR 768 x 1024 (1536 by 2048) -------------------------------------- */
+
+    @media only screen and (max-width: 767px) {
+
+
+    /* MODAL CONTROL SECTION */
+
+        .modal-container {
+            width:80vw;
+        }
+
+
+        #homeheader {
+        height: 50vh;
+        width: 100%;
+        background-size: 220%;
+        background-position: top;
+        background-repeat: no-repeat;
+        }            
+    }
+
+
+
+/* SMALL PHONES: from 321px to 480px --------------------------------------- */
+/* LANDSCAPE MODE ---------------------------------------------------------- */
+/* IPHONE SE 568 x 320 (1136 x 640) ---------------------------------------- */
+
+@media only screen and (max-width: 568px) {
+
+    
+/*
+    .grid {
+    display: inline;
+    }
+*/
+
+
+    #showcaseVideo {
+    width: 96%;
+    }
+    
+    
+        #homeheader {
+        height: 50vh;
+        width: 100%;
+        background-size: 280%;
+        background-position: top;
+        background-repeat: no-repeat;
+        }       
+    
+    
+}
+
+/* SMALL PHONES: from 0 to 320px --------------------------------------- */
+/* PORTRAIT MODE ------------------------------------------------------- */
+/* IPHONE SE 320 x 568 (640 x 1136) ------------------------------------ */
+
+@media only screen and (max-width: 319px) {
+
+    }
+
+
