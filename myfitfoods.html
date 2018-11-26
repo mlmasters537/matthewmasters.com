@@ -164,7 +164,8 @@
                     <h2>deliverables</h2>
                 </div>
                 
-                <div class="row js--wp-1">
+                <div class="row">
+<!--                <div class="row js--wp-1"> This Piece Animates-->
 
                 <div class="col span-1-of-3 box">
                     <i class="ion-person icon-big"></i>
@@ -198,9 +199,14 @@
         <!-- First Hero Image break STARTS here -->
         <section class="section">
             <div class="row">
-                <div class="col span-1-of-1 box">
-                    <img class="aboutMeImage" src="resources/img/portfoilioPages/myfitfoods/Logo%20Hero.jpg" alt="About Me Image">
+            
+                <!-- Slide Show START -->
+                <div class="row">
+                <img name="slide" class="slideShowImg" alt="Logo Slide Show">
+                <!--<img name="slide" width="400" height="200">-->
                 </div>
+                <!-- Slide Show END -->
+           
             </div>      
         </section>
         <!-- First Hero Image break ENDS here -->
@@ -211,7 +217,7 @@
             <ul class="portfolio-showcase clearfix">
                 <li>  
                     <figure class="portfolio-photo">   
-                        <a data-fancybox="VisualAdvertsGallery" data-caption="Visual Advert Example#1" href="resources/img/portfoilioPages/myfitfoods/Logo%20Hero.jpg">
+                        <a data-fancybox="MyFitFoodsLogoGallery" data-caption="Visual Advert Example#1" href="resources/img/portfoilioPages/myfitfoods/Logo%20Hero.jpg">
                         <!-- This line is the ENLARGED image -->
                         <img src="resources/img/portfoilioPages/myfitfoods/Logo%20Hero.jpg" height="100" alt="Visual Advertisement Example"></a>
                         <!-- This line is the SMALL image -->
@@ -219,7 +225,7 @@
                 </li>
                 <li>
                     <figure class="portfolio-photo">   
-                        <a data-fancybox="VisualAdvertsGallery" data-caption="Visual Advert Example#1" href="resources/img/portfoilioPages/myfitfoods/Logo%20old.jpg">
+                        <a data-fancybox="MyFitFoodsLogoGallery" data-caption="Visual Advert Example#1" href="resources/img/portfoilioPages/myfitfoods/Logo%20old.jpg">
                         <!-- This line is the ENLARGED image -->
                         <img src="resources/img/portfoilioPages/myfitfoods/Logo%20old.jpg" height="100" alt="Visual Advertisement Example"></a>
                         <!-- This line is the SMALL image -->
@@ -467,8 +473,34 @@
             </div>
         </footer>
      
-        
-           
+    <!--Slideshow Script - START -->
+    <script>
+        var i = 0; // Start point
+        var images = [];
+        var time = 3000;
+
+        // Image List
+        images[0] = 'resources/img/portfoilioPages/myfitfoods/Logo%20old.jpg';
+        images[1] = 'resources/img/portfoilioPages/myfitfoods/Logo%20Hero.jpg';
+
+        // Change Image
+        function changeImg(){
+            document.slide.src = images[i];
+
+            if(i < images.length - 1){
+                i++;
+            } else {
+                i = 0;
+            }
+
+            setTimeout("changeImg()", time);
+        }
+
+        window.onload = changeImg;
+
+    </script>
+    <!--Slideshow Script - END -->  
+               
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
     <script src="vendors/js/jquery.waypoints.min.js"></script>
     <script src="resources/js/script.js"></script>

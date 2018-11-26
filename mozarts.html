@@ -159,7 +159,8 @@
                     <h2>deliverables</h2>
                 </div>
                 
-                <div class="row js--wp-1">
+                <div class="row">
+<!--                <div class="row js--wp-1"> animated piece! -->
 
                 <div class="col span-1-of-3 box">
                     <i class="ion-person icon-big"></i>
@@ -188,15 +189,17 @@
             </div>   
         </section>
         <!-- END -- SERVICES - SECTION -->  
-        
+
     
     <!-- First Hero Image break STARTS here -->
     <section>
+          
+        <!-- Slide Show START -->
         <div class="row">
-            <div class="col span-1-of-1 box">
-                <img class="aboutMeImage" src="resources/css/img/NewMozartsLogo.jpg" alt="About Me Image">
-            </div>
+        <img name="slide" class="slideShowImg" alt="Logo Slide Show">
+        <!--<img name="slide" width="400" height="200">-->
         </div>
+        <!-- Slide Show END -->
         
             <ul class="portfolio-showcase clearfix">
                 <li>  
@@ -216,12 +219,7 @@
                     </figure>
                 </li>
             </ul>
-    </section>
-    <!-- First Hero Image break ENDS here -->
-
-    
-    <!-- START -- Design Challenge Section -->
-    <section class="section" id="aboutMe">
+            
         <div class="row">
             <div class="text-container">
                     <h4>Logo Design</h4>
@@ -235,10 +233,13 @@
                         <a href="#"><span class="show-more">Show more</span></a>
                 </div>
             </div>
-        </div>
+        </div>            
     </section>
-    <!-- END -- Design Challenge Section --> 
+    <!-- First Hero Image break ENDS here -->
+
        
+    <section></section>
+
        
         <!-- START -- SHOWCASE VIDEO - SECTION -->
         <section class="section" id="showcase">  
@@ -250,32 +251,9 @@
             <div class="row">
                 <video playsinline autoplay muted loop id="showcaseVideo"><source src="resources/img/portfoilioPages/mozarts/MozartsVideo/motionMenuMozarts.mp4" type="video/mp4" alt="Mozarts Motion Menu"/></video>
             </div>
-            
-        </section>
         <!-- END -- SHOWCASE VIDEO - SECTION -->            
-                                                           
-        
-    <!-- START -- Design Challenge Section -->
-    <section class="section" id="aboutMe">
-        <div class="row">
-            <div class="text-container">
-                    <h4>Motion graphics</h4>
-                    <h2>Eye cataching menu</h2>
 
-                    <div class="content hideContent">
-                        <p class="long-copy">I began the project by concentrating on the companies logo as all identity systems are anchored by one. In these times, the logo must not only conform to the traditional principles of versatility like being functional on a spectrum of sizes and platforms, but in the digital age it must now be forward thinking on how they are used on digital platforms like desktop, tablet and mobile devices.<br><br>The issues that were addressed in the redesign include: odd uses of white space and kerning, closed negative spaces from the decorative scripting, legibility issues with the second half of the company name, resizing issues inherent to the design which included eliminating the “coffee roasters” banner.<br><br>I felt that a complete redesign was unecessary and would actually damage the brand if pursuited as the old logo was locally reasonably recognizable. So it became a critical goal of the redesign to retain the overall feel of the old logo it was replacing. I embraced Ozwald Boateng’s idea of, “reminiscing a bit of the past but with a forward vision.”<br><br>While there is room in this project for a more complete robust identity system, i.e. collateral, packaging, promos, etc., I felt that urgency was needed on the other problem areas and that the overall system could be addressed at a later date.</p>
-                    </div>
-
-                    <div class="show-more">
-                        <a href="#"><span class="show-more">Show more</span></a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- END -- Design Challenge Section -->
-    
-    <!-- START - FANCY BOX PORTFOLIO SHOWCASE -->
-    <section>
+<!-- START - FANCY BOX PORTFOLIO SHOWCASE -->
        <div class="row">
         <!-- Calendar, Row One: starts here-->
         <ul class="portfolio-showcase clearfix">
@@ -332,8 +310,31 @@
             
         </ul>
         </div>
+    <!-- END - FANCY BOX PORTFOLIO SHOWCASE -->
+        </section>
+    
+
+            
+    <!-- START -- Design Challenge Section -->
+    <section class="section" id="aboutMe">
+        <div class="row">
+            <div class="text-container">
+                    <h4>Motion graphics</h4>
+                    <h2>Eye cataching menu</h2>
+
+                    <div class="content hideContent">
+                        <p class="long-copy">I began the project by concentrating on the companies logo as all identity systems are anchored by one. In these times, the logo must not only conform to the traditional principles of versatility like being functional on a spectrum of sizes and platforms, but in the digital age it must now be forward thinking on how they are used on digital platforms like desktop, tablet and mobile devices.<br><br>The issues that were addressed in the redesign include: odd uses of white space and kerning, closed negative spaces from the decorative scripting, legibility issues with the second half of the company name, resizing issues inherent to the design which included eliminating the “coffee roasters” banner.<br><br>I felt that a complete redesign was unecessary and would actually damage the brand if pursuited as the old logo was locally reasonably recognizable. So it became a critical goal of the redesign to retain the overall feel of the old logo it was replacing. I embraced Ozwald Boateng’s idea of, “reminiscing a bit of the past but with a forward vision.”<br><br>While there is room in this project for a more complete robust identity system, i.e. collateral, packaging, promos, etc., I felt that urgency was needed on the other problem areas and that the overall system could be addressed at a later date.</p>
+                    </div>
+
+                    <div class="show-more">
+                        <a href="#"><span class="show-more">Show more</span></a>
+                </div>
+            </div>
+        </div>
     </section>
-    <!-- END - FANCY BOX PORTFOLIO SHOWCASE -->   
+    <!-- END -- Design Challenge Section -->
+    
+    <section></section>
    
 
     <!-- First Hero Image break STARTS here -->
@@ -481,8 +482,36 @@
             </div>
         </footer>
      
-        
-           
+
+    <!--Slideshow Script - START -->
+    <script>
+        var i = 0; // Start point
+        var images = [];
+        var time = 3000;
+
+        // Image List
+        images[0] = 'resources/img/portfoilioPages/mozarts/OldMoazrtsLogo.jpg';
+        images[1] = 'resources/img/portfoilioPages/mozarts/NewMozartsLogo.jpg';
+
+        // Change Image
+        function changeImg(){
+            document.slide.src = images[i];
+
+            if(i < images.length - 1){
+                i++;
+            } else {
+                i = 0;
+            }
+
+            setTimeout("changeImg()", time);
+        }
+
+        window.onload = changeImg;
+
+    </script>
+    <!--Slideshow Script - END -->   
+   
+                   
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
     <script src="vendors/js/jquery.waypoints.min.js"></script>
     <script src="resources/js/script.js"></script>
