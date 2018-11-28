@@ -40,6 +40,8 @@ $(document).ready(function() {
     });
     
     
+    
+    
     /* Animations on scroll */
     $('.js--wp-1').waypoint(function(direction) {
         $('.js--wp-1').addClass('animated fadeIn');
@@ -71,7 +73,7 @@ $(document).ready(function() {
         var nav = $('.js--main-nav');
         var icon = $('.js--nav-icon i');
         
-        nav.slideToggle(200);
+        nav.slideToggle(400);
         
         if (icon.hasClass('ion-navicon-round')) {
             icon.addClass('ion-close-round');

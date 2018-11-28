@@ -78,79 +78,100 @@
         margin: 0;
         }
  
+/*
         .section-anchor1 {
         top: 45%;
         }
+*/
 
         .hero-text-box {
         width: 80%;
         top: 25%;
         }   
     
+    .section-anchor1 {display: none;}
+    
     
         #homeheader {
         height: 50vh;
-        width: 100%;
-        background-size: 200%;
-        background-position: top;
+        background-size: auto;
         background-repeat: no-repeat;
+        background-position: top; 
+        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageTAB.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageTAB.jpg);            
         }    
 
         #mozarts {
         height: 50vh;
-        background-size: 120%;
-        background-position: top;
+        background-size: auto;
         background-repeat: no-repeat;
+        background-position: top; 
+        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageMozartsTAB.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageMozartsTAB.jpg);            
         }    
-
+    
         #myFitFoods {
         height: 50vh;
-        background-size: 120%;
-        background-position: top;
+        background-size: auto;
         background-repeat: no-repeat;
-        }    
+        background-position: top; 
+        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageMyFitFoodsTAB.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageMyFitFoodsTAB.jpg);            
+        }  
 
         #twixel {
         height: 50vh;
-        background-size: 120%;
-        background-position: top;
+        background-size: auto;
         background-repeat: no-repeat;
-        }    
-
+        background-position: top; 
+        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageTwixelTAB.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageTwixelTAB.jpg);            
+        }  
+    
         #theSystem {
         height: 50vh;
-        background-size: 120%;
-        background-position: top;
+        background-size: auto;
         background-repeat: no-repeat;
-        }    
-
+        background-position: top; 
+        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageTheSystemTAB.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageTheSystemTAB.jpg);            
+        } 
+  
         #visual {
         height: 50vh;
-        background-size: 120%;
-        background-position: top;
+        background-size: auto;
         background-repeat: no-repeat;
+        background-position: top; 
+        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageVisualTAB.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageVisualTAB.jpg);            
         }    
-
+    
         #canvaswines {
         height: 50vh;
-        background-size: 120%;
-        background-position: top;
+        background-size: auto;
         background-repeat: no-repeat;
-        }    
+        background-position: top; 
+        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageCanvasWinesTAB.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageCanvasWinesTAB.jpg);            
+        }   
 
         #dsr {
         height: 50vh;
-        background-size: 120%;
-        background-position: top;
+        background-size: auto;
         background-repeat: no-repeat;
-        }    
+        background-position: top; 
+        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageDSRTAB.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageDSRTAB.jpg);            
+        }   
 
         #post {
         height: 50vh;
-        background-size: 120%;
-        background-position: top;
+        background-size: auto;
         background-repeat: no-repeat;
-        }    
+        background-position: top; 
+        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImagePostTAB.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImagePostTAB.jpg);            
+        }     
 
         #threeamigos {
         height: 50vh;
@@ -161,20 +182,26 @@
 
         #HistoryOfType {
         height: 50vh;
-        background-size: 120%;
-        background-position: top;
+        background-size: auto;
         background-repeat: no-repeat;
-        }    
+        background-position: top; 
+        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderTypehistTAB.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderTypehistTAB.jpg); 
+         }      
 
         #morphine {
         height: 50vh;
-        background-size: 120%;
-        background-position: top;
+        background-size: auto;
         background-repeat: no-repeat;
+        background-position: top; 
+        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageMorphineTAB.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageMorphineTAB.jpg);            
         }    
-
-
+     
+    .aboutMeImage2{
+        width: 65%;
     }
+}
 
 
 
@@ -192,6 +219,7 @@
         }
 
 
+/*
         #homeheader {
         height: 50vh;
         width: 100%;
@@ -199,6 +227,7 @@
         background-position: top;
         background-repeat: no-repeat;
         }            
+*/
     }
 
 
@@ -222,6 +251,7 @@
     }
     
     
+/*
         #homeheader {
         height: 50vh;
         width: 100%;
@@ -229,6 +259,7 @@
         background-position: top;
         background-repeat: no-repeat;
         }       
+*/
     
     
 }

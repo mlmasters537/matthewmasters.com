@@ -1,6 +1,6 @@
 /*
-M RED color: #4f7177
-
+M RED color: #ba2615
+ba2615
 */
 
 
@@ -39,17 +39,16 @@ body {
 /* REUSABLE COMPONENTS */
 /* ----------------------------------------------- */
 
-
 .row {
     max-width: 1140px;
     margin: 0 auto;
-/*    border-bottom: 1px solid #4f7177;*/
+/*    border-bottom: 1px solid #ba2615;*/
 
 }
 
 section {
-    padding: 80px 0;
-/*    border-bottom: 1px solid #4f7177;*/
+    padding: 30px 0;
+/*    border-bottom: 1px solid #ba2615;*/
     }
 
 #sectionDark {
@@ -58,7 +57,8 @@ section {
     }
 
 .box {
-    padding: 1%;
+    /* padding: 1%; --- original */
+    padding: 4%;
 }
 
 /* ----- HEADINGS ----- */
@@ -80,7 +80,6 @@ h1 {
 
 h2 {
     font-family: 'Playfair Display', serif;
-    /*    font-family: 'Crimson Text', serif;*/
     font-weight: 400;
     font-size: 180%;
     font-weight: bold;
@@ -89,7 +88,7 @@ h2 {
     margin-bottom: 30px;
     margin-top: 2px;
     letter-spacing: 1px;
-    color: #4f7177;
+    color: #ba2615;
 }
 
 h3 {
@@ -103,12 +102,18 @@ h3 {
 h4:after {
     display: block;
     height: 2px;
-    background-color: #4f7177;
+    background-color: #ba2615;
 /*    background-color: #e67e22;*/
     content: " ";
     width: 25px;
     margin: 0 auto;
     margin-top: 12px;
+}
+
+h4:before {
+    display: block;
+    content: " ";
+    margin-top: 20px;
 }
 
 h4 {
@@ -133,6 +138,26 @@ h4 {
     margin-left: 15%;
 }
 
+.misc-copy {
+    margin: 0 auto;
+    font-family: 'lato', serif;
+    font-weight: 300;
+    letter-spacing: 0.0825em;
+/*    text-transform: uppercase;*/
+/*    text-align: center;*/
+/*    font-size: 100%;*/
+/*    margin-top: 80px;*/
+/*    margin: 0 0 3% 0;*/
+    color: #575757;
+    max-width: 79%;
+}
+
+.misc-copy:before {
+    display: block;
+    content: " ";
+    margin-top: 20px;
+}
+
 .box p {
     font-size: 90%;
     line-height: 145%;
@@ -144,7 +169,7 @@ h4 {
     font-size: 350%;
     text-align: center;
     display: block;
-    color: #4f7177;
+    color: #ba2615;
 /*    color: #262626;*/
 /*    color: #e67e22;*/
     margin-bottom: 10px;
@@ -154,7 +179,7 @@ h4 {
     display: inline-block;
     width: 30px;
     text-align: center;
-    color: #4f7177;
+    color: #ba2615;
 /*    color: #e67e22;*/
     font-size: 120%;
     margin-right: 10px;
@@ -177,7 +202,7 @@ h4 {
 .weight-heavy {
     font-family: 'Playfair Display', serif;
     font-weight: 900;
-    color: #4f7177;
+    color: #ba2615;
 }
 
 
@@ -187,11 +212,11 @@ h4 {
 
 a:link,
 a:visited {
-    color: #4f7177;
+    color: #ba2615;
 /*    color: #e67e22;*/
     text-decoration: none;
     padding-bottom: 1px;
-    border-bottom: 1px solid #4f7177;
+    border-bottom: 1px solid #ba2615;
 /*    border-bottom: 1px solid #e67e22;*/
     -webkit-transition: border-bottom 0.2s, color 0.2s;
     transition: border-bottom 0.2s, color 0.2s;
@@ -219,9 +244,9 @@ input[type=submit] {
 .btn-full:link,
 .btn-full:visited,
 input[type=submit] {
-    background-color: #4f7177;
+    background-color: #ba2615;
 /*    background-color: #e67e22;*/
-    border: 1px solid #4f7177;
+    border: 1px solid #ba2615;
 /*    border: 1px solid #e67e22;*/
     color: #fff;
     margin-right: 15px;
@@ -229,7 +254,7 @@ input[type=submit] {
 
 .btn-ghost:link,
 .btn-ghost:visited {
-    border: 1px solid #4f7177;
+    border: 1px solid #ba2615;
 /*    border: 1px solid #e67e22;*/
     color: #e67e22;
 }
@@ -238,13 +263,13 @@ input[type=submit] {
 .btn:active,
 input[type=submit]:hover,
 input[type=submit]:active {
-    background-color: #344a4e;
-    background-color: #344a4e;
+    background-color: #5d160e;
+    background-color: #5d160e;
 }
 
 .btn-full:hover,
 .btn-full:active {
-    border: 1px solid #344a4e;
+    border: 1px solid #5d160e;
 }
 
 .btn-ghost:hover,
@@ -300,6 +325,9 @@ header {
 #twixel {
     background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageTwixel.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageTwixel.jpg);
+    transform: translate(-50,-50);
+    top: 50%;
+    left: 50%;
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -315,13 +343,15 @@ header {
     background-attachment: fixed;  
 }
 
+
 #visual {
     background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageVisual.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageVisual.jpg);
-    background-size: cover;
+    background-size: cover;    
     background-position: center;
     height: 100vh;
-    background-attachment: fixed;  
+    background-attachment: fixed;
+    /* overflow: hidden; */
 }
 
 #canvaswines {
@@ -410,6 +440,7 @@ header {
 
 .logo-black { 
     display: none;
+/*    height: 40px;*/
     height: 50px;
     width: auto;
     float: left;
@@ -442,7 +473,7 @@ header {
 
 .main-nav li a:hover,
 .main-nav li a:active {
-    border-bottom: 2px solid #4f7177;
+    border-bottom: 2px solid #ba2615;
 /*    border-bottom: 2px solid #e67e22;*/
 }
 
@@ -487,11 +518,33 @@ header {
 /* FEATURES */
 /* ----------------------------------------------- */
 
+#section-one {
+    padding-top: 60px;
+}
+
 .section-features .long-copy {
 /*    margin-bottom: 30px;*/
 }
 
+#deliverables { 
+/*    display: block;*/
+/*    content: "";*/
+    border-top: 1px solid #ba2615;
+    border-bottom: 1px solid #ba2615;
+    width: 90%;
+}
 
+#exampleSection {
+    margin-top: 10px;
+}
+
+#exampleSection:after {
+    padding-bottom: 60px;
+}
+
+.section-form{
+    margin-bottom: 90px;
+}
 
 /* ----------------------------------------------- */
 /* FORM */
@@ -532,7 +585,7 @@ input[type=checkbox] {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    width: 80%;
     overflow-x: hidden;
 }
 
@@ -547,7 +600,7 @@ input[type=checkbox] {
 /*    display: flex;*/
     margin: 0 auto;
     height: auto;
-    width: 100%;
+    width: 80%;
     display: block;
     margin-bottom: 10px;
     }
@@ -700,7 +753,27 @@ footer p {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    overflow-x: hidden;
+/*    overflow-x: hidden;*/
+    margin-bottom: 20px;
+    }
+
+.aboutMeImage2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+/*    overflow-x: hidden;*/
+    margin-bottom: 20px;
+    }
+
+
+.aboutMeImage3 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+/*    overflow-x: hidden;*/
+    margin-bottom: 20px;
     }
 
 
@@ -748,7 +821,7 @@ footer p {
     }
 
 .show-more:hover {
-    color: #4f7177;
+    color: #ba2615;
     }
 
 .read-more-state {
@@ -788,7 +861,19 @@ footer p {
   border-radius: .25em;
 }
 
+.text-container {
+    padding: 0 4%;
+}
 
+.contact-text-container {
+    padding: 0 4%;
+}
+
+.contact-text-container:after {
+    display: block;
+    content: "";
+    margin-bottom: 30px;
+}
 
 
 
@@ -944,6 +1029,10 @@ footer p {
 /* FANCY BOX --- */
 /* ----------------------------------------------- */
 
+#portfolio {
+    margin-bottom: 60px;
+}
+
 .portfolio-showcase {
     list-style: none;
     text-decoration: none;
@@ -982,6 +1071,7 @@ footer p {
     transition: opacity 0.5s, -webkit-transform 0.5s;
     transition: transform 0.5s, opacity 0.5s;
     transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+/*    overflow: hidden;*/
     }
 
 .portfolio-photo img:hover {
@@ -996,23 +1086,16 @@ footer p {
 /* ----------------------------------------------- */
 
 .misc_sect {
+    border-top: 1px solid #ba2615;
+/*    border-bottom: 1px solid #ba2615;*/
     width: 80%;
-    margin: auto;
+    margin: 0 auto;
 }
 
 
 /* ----------------------------------------------- */
-/* SELECTION HIGHLIGHTER */
+/* TEXT SELECTION HIGHLIGHTER */
 /* ----------------------------------------------- */
-
-/*- COLORS -*/
-/*- Highlighter Yello #ccff00 -*/
-/*- Pink -25% DESAT #e6197f -*/
-/*- Pink 25% DESAT #ff007f -*/
-/*- Pink DARKER #cc0066 -*/
-/*- Greenish Blue #4f7177 -*/
-/*- Yellow #fff133 -*/
-
 
 ::selection {
     background: #fff133; /* WebKit/Blink Browsers */
@@ -1022,4 +1105,3 @@ footer p {
 ::-moz-selection {
     background: #d1f449; /* Gecko Browsers */
     }
-
