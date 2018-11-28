@@ -141,11 +141,11 @@ h4 {
 .misc-copy {
     margin: 0 auto;
     font-family: 'lato', serif;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.0825em;
 /*    text-transform: uppercase;*/
 /*    text-align: center;*/
-/*    font-size: 100%;*/
+    font-size: 75%;
 /*    margin-top: 80px;*/
 /*    margin: 0 0 3% 0;*/
     color: #575757;
@@ -947,12 +947,6 @@ footer p {
     transform: scale(1.04);
     }
 
-
-
-
-
-
-
 /* ------------------------------------------------------- */
 /* - Third Party Brand/Logo ------------------------------ */
 /* ------------------------------------------------------- */
@@ -1006,6 +1000,7 @@ footer p {
     font-size: 2em;
     text-align: center;
     }
+
 
 
 .Brand_Logos {
