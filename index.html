@@ -69,7 +69,48 @@
         <meta name="msapplication-TileColor" content="#4f7177">
         <meta name="msapplication-config" content="/resources/favicons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
-                
+        
+              
+        <!-- Email thuggin - start -->
+<script src="https://code.jquery.com/jquery-3.3.1.js"
+    	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	  	crossorigin="anonymous"></script>
+<script>
+$(document).ready(function() {
+    $("#email-form").submit(function(event) {
+        alert("Handler for .submit() called.");
+        event.preventDefault(); // Stop the submit
+
+        // Get the values to submit
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var comment = $("#comment").val();
+
+
+        // Make AJAX post with JSON data
+        $.post({
+            url: "http://matthewmasters.com/mailer.php",
+            data: {'name' : name, 
+                   'email' : email, 
+                   "comment" : comment, 
+                   "submit" : "submit"}
+        }).done(function(data) {
+            // response holds JSON data in 'data' variable
+            alert("data.success: " + data.success + '\n' + "data.message: " + data.message);
+            if(data.success === "true") {
+                alert("email was sent. Show modal");
+            } else {
+                alert("email was NOT sent. Show modal");
+            }
+        });
+
+
+
+    });
+});
+</script>                                
+        <!-- Email thuggin - end -->
+              
     </head>
     
     <body id="top-of-browser">
@@ -334,6 +375,13 @@
                 </form>
             </div>
         </section>
+        
+        
+        
+        
+        
+        
+        
         <!-- END -- CONTACT FORM - SECTION -->
         
         <section class="section-contact">
@@ -362,7 +410,7 @@
                 </div>
             </div>
             <div class="row">
-                <p>ver. "Gettysburg"</p>
+                <p>mlmasters@gmail.com</p>
                 <p>Copyright &copy; 2018 by M|DSGN. All rights reserved.</p>
             </div>
         </footer>

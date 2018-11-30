@@ -1,53 +1,65 @@
 <?php
 
-// check to see if this is a POST request. Error out if it isn't
-if (!isset($_POST['submit'])) {
-    echo "<h1>Error</h1>\n
-        <p>Accessing this page directly is not allowed.</p>";
+//==================================================
+// Check to see if request was an HTTP POST
+//==================================================
+if(!isset($_POST['submit'])) { // check to see if there was a 'submit' variable set
+	// send response back to browser that there was an error
+    $data = [ 'success' => 'false', 'message' => 'Accessing this service directly is not allowed.' ];
+    header('Content-type:application/json;charset=utf-8');
+    echo json_encode($data);
+	exit;
+}
+
+//==================================================
+// Check all required variables are set
+//==================================================
+if(empty($_POST['email']) || empty($_POST['name']) || empty($_POST['comment'])) {
+	// send response back to browser that there was an error
+    $data = [ 'success' => 'false', 'message' => 'Email, name, and comment required.' ];
+    header('Content-type:application/json;charset=utf-8');
+    echo json_encode($data);
     exit;
 }
 
-// replace carriage returns and new lines with "" in the email
-$email = preg_replace("([\r\n])", "", $_POST["email"]);
+//==================================================
+// Assign POST variables to local variables
+//==================================================
+$email = preg_replace("([\r\n])", "", $_POST['email']); // Remove 'return' or 'new line' with ''
+$name = $_POST['name'];
+$comment = $_POST['comment'];
 
-// Prevent email header injection
+//==================================================
+// Assign POST variables to local variables
+//==================================================
 $find = "/(content-type|bcc:|cc:)/i";
-if (preg_match($find, $_POST["name"])
-    || preg_match($find, $_POST["email"])
-    || preg_match($find, $_POST["findus"])
-    || preg_match($find, $_POST["message"])) {
-
-    // if someone tried to manually set email headers, then
-    // tell them to beat it
-    echo "<h1>Error</h1>\n
-        <p>No meta/header injections, please.</p>";
-
+if(preg_match($find, $name) || preg_match($find, $email) || preg_match($find, $comment)) {
+	// send response back to browser that there was an error
+    $data = [ 'success' => 'false', 'message' => 'No meta/header injections, please.' ];
+    header('Content-type:application/json;charset=utf-8');
+    echo json_encode($data);
     exit;
 }
 
-// now send email
+//==================================================
+// Send email
+//==================================================
+$to = "mlmasters@gmail.com";
+$subject = "CONTACT FORM";
 
-$to = "mlmasters+matthewmasters.com@gmail.com";
-$subject = "MatthewMasters.com CONTACT FORM";
+// compose headers
+$headers = "From: webmaster@dev.digitaldarwin.com\r\n";
+$headers .= "Reply-To: ".$email."\r\n";
+$headers .= "X-Mailer: PHP/".phpversion();
 
-$content = "
-<html>
-<head>
-</head>
-    <body>
-        <p>find us: ".$_POST["findus"]."</p>
-        <p>email: ".$_POST["email"]."</p>
-        <p>message: ".$_POST["message"]."</p>
-    </body>
-</html>";
-
-// To send HTML mail, the Content-type header must be set
-$headers = "MIME-Version: 1.0\r\n";
-$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
 
 // send email
-mail($to, $subject, $content, $headers);
+mail($to, $subject, $comment, $headers);
 
-header('Location: http://www.matthewmasters.com');
 
+// send response back to browser
+$data = [ 'success' => 'true', 'message' => 'Email sent.' ];
+header('Content-type:application/json;charset=utf-8');
+echo json_encode($data);
+exit;
 ?>
