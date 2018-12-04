@@ -280,8 +280,8 @@ input[type=submit]:active {
 /* ----------------------------------------------- */
 
 #homeheader {
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(img/HeaderCoverImage2.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(img/HeaderCoverImage2.jpg);
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(img/HeaderCoverImage.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(img/HeaderCoverImage.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -673,7 +673,7 @@ footer p {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 98%;
     margin-bottom: 20px;
     }
 
