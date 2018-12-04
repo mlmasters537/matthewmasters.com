@@ -7,11 +7,11 @@
         .grid {
             display: grid;
             grid-template-columns: 33.3% 33.3% 33.3%;
-            }
+        }
 
         .grid > div {
             width: 60%;
-            } 
+        } 
 
 
         .item {
@@ -24,15 +24,14 @@
             font-size: 24px;
         }
     
-    
-    
     }
 
 
 
 /* Big tablet to 1920px (widths smaller than the 1140px row) */
 @media only screen and (max-width: 3839px) {
-
+    
+    }
 
 
 /* Big tablet to 1920px (widths smaller than the 1140px row) */
@@ -41,7 +40,6 @@
         .grid {
             display: grid;
             grid-template-columns: 25% 25% 25% 25%;
-            /* border-bottom: 2px solid #333; */
         }
 
     }
@@ -72,136 +70,42 @@
         display: grid;
         grid-template-columns: 50% 50%;
         }
-    
+
         .grid > div {
         width: 100%;
         margin: 0;
         }
- 
-/*
-        .section-anchor1 {
-        top: 45%;
+
+        .project1 img {
+        -webkit-filter: none;
+        -moz-filter: none;
+        -ms-filter: none;
+        filter: none;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -ms-transition: none;
+        transition: none;    
         }
-*/
+
+        .project1 img:hover {
+        -webkit-transition: none;
+        -moz-transition: none;
+        -ms-transition: none;
+        transition: none;
+        }
 
         .hero-text-box {
         width: 80%;
-        top: 25%;
-        }   
-    
-    .section-anchor1 {display: none;}
-    
-    
-        #homeheader {
-        height: 50vh;
-        background-size: auto;
-        background-repeat: no-repeat;
-        background-position: top; 
-        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageTAB.jpg);
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageTAB.jpg);            
-        }    
-
-        #mozarts {
-        height: 50vh;
-        background-size: auto;
-        background-repeat: no-repeat;
-        background-position: top; 
-        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageMozartsTAB.jpg);
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageMozartsTAB.jpg);            
-        }    
-    
-        #myFitFoods {
-        height: 50vh;
-        background-size: auto;
-        background-repeat: no-repeat;
-        background-position: top; 
-        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageMyFitFoodsTAB.jpg);
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageMyFitFoodsTAB.jpg);            
-        }  
-
-        #twixel {
-        height: 50vh;
-        background-size: auto;
-        background-repeat: no-repeat;
-        background-position: top; 
-        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageTwixelTAB.jpg);
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageTwixelTAB.jpg);            
-        }  
-    
-        #theSystem {
-        height: 50vh;
-        background-size: auto;
-        background-repeat: no-repeat;
-        background-position: top; 
-        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageTheSystemTAB.jpg);
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageTheSystemTAB.jpg);            
-        } 
-  
-        #visual {
-        height: 50vh;
-        background-size: auto;
-        background-repeat: no-repeat;
-        background-position: top; 
-        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageVisualTAB.jpg);
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageVisualTAB.jpg);            
-        }    
-    
-        #canvaswines {
-        height: 50vh;
-        background-size: auto;
-        background-repeat: no-repeat;
-        background-position: top; 
-        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageCanvasWinesTAB.jpg);
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageCanvasWinesTAB.jpg);            
+        top: 50%;
         }   
 
-        #dsr {
-        height: 50vh;
-        background-size: auto;
-        background-repeat: no-repeat;
-        background-position: top; 
-        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageDSRTAB.jpg);
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageDSRTAB.jpg);            
-        }   
+        .section-anchor1 {display: none;}
 
-        #post {
-        height: 50vh;
-        background-size: auto;
-        background-repeat: no-repeat;
-        background-position: top; 
-        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImagePostTAB.jpg);
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImagePostTAB.jpg);            
-        }     
+        .aboutMeImage2{
+            width: 65%;
+        }
 
-        #threeamigos {
-        height: 50vh;
-        background-size: 120%;
-        background-position: top;
-        background-repeat: no-repeat;
-        }    
-
-        #HistoryOfType {
-        height: 50vh;
-        background-size: auto;
-        background-repeat: no-repeat;
-        background-position: top; 
-        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderTypehistTAB.jpg);
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderTypehistTAB.jpg); 
-         }      
-
-        #morphine {
-        height: 50vh;
-        background-size: auto;
-        background-repeat: no-repeat;
-        background-position: top; 
-        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageMorphineTAB.jpg);
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(img/HeaderCoverImageMorphineTAB.jpg);            
-        }    
-     
-    .aboutMeImage2{
-        width: 65%;
     }
-}
 
 
 
@@ -211,23 +115,10 @@
 
     @media only screen and (max-width: 767px) {
 
-
-    /* MODAL CONTROL SECTION */
-
         .modal-container {
             width:80vw;
         }
 
-
-/*
-        #homeheader {
-        height: 50vh;
-        width: 100%;
-        background-size: 220%;
-        background-position: top;
-        background-repeat: no-repeat;
-        }            
-*/
     }
 
 
@@ -238,32 +129,10 @@
 
 @media only screen and (max-width: 568px) {
 
-    
-/*
-    .grid {
-    display: inline;
     }
-*/
 
-
-    #showcaseVideo {
-    width: 96%;
-    }
     
     
-/*
-        #homeheader {
-        height: 50vh;
-        width: 100%;
-        background-size: 280%;
-        background-position: top;
-        background-repeat: no-repeat;
-        }       
-*/
-    
-    
-}
-
 /* SMALL PHONES: from 0 to 320px --------------------------------------- */
 /* PORTRAIT MODE ------------------------------------------------------- */
 /* IPHONE SE 320 x 568 (640 x 1136) ------------------------------------ */

@@ -55,8 +55,6 @@
         
         <!-- Google Fonts: PLAYFAIR DISPLAY-->
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
-                
-<!--<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">-->
                  
         <title>M|DSGN - Matthew Masters</title>
 
@@ -95,8 +93,7 @@
 
             
             <div class="hero-text-box">
-                <h1><span class="headerWelcome">Welcome to M|DSGN</span></h1>
-                <h1>Creative Solutions to Visual Problems</h1>
+                <h1><span class="headerWelcome">Welcome to M|DSGN</span><br>Creative Solutions to Visual Problems</h1>
                 <a class="btn btn-full" href="#showcase">Video Showcase</a>
             </div>
             
@@ -262,10 +259,46 @@
         </section>
     <!-- END -- WHO_AM_I_BODYCOPY - SECTION -->
 
+       
+    <!-- START -- CONTACT/MESSENGER - SECTION -->
+        <section class="section-form" id="contact">
+            <section class="contact-text-container">
+                <h4>Contact</h4>
+                <h2>Lets Make Amazing Together</h2>
+                <div class="row">
+                <p class="long-copy">Got a really cool idea you need help with bringing to life? Maybe you have a piece but need help with the rest of the puzzle? I would love to hear from you! Feel Free to hit me up at any time by filling out the form below and I will get back to you within 24 hours. I do the best can can at making the process and work as easy for you as possible.</p>
+                </div>
+            </section>
+    <!-- END -- CONTACT/MESSENGER - SECTION -->
+        
+        
+        
         <section class="section-form" id="form">
+            <div class="row">
+                <h2>We're happy to hear from youPHP</h2>
+            </div>
             <div class="row">
                 <form method="post" action="mailer-new.php" class="contact-form">
                     <div class="row">
+                  
+<!--                <div class="row">-->
+                
+                  <?php  
+                    if($_GET['succes'] == 1) {
+                        echo "<div class=\"form-messages success\">Thank you! Your Message has been sent!</div>";
+                    }
+
+                    if($_GET['succes'] == -1) {
+                        echo "<div class=\"form-messages error\">Oops! Something went wrong. Please try again!</div>";
+                    }                
+                    ?>
+                
+                
+                
+                
+<!--                       </div>-->
+
+                       
                        
                         <div class="col span-1-of-3">
                             <label for="name">Name</label>
@@ -282,7 +315,27 @@
                             <input type="email" name="email" id="email" placeholder="Your email" required>
                         </div>
                     </div>
-
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="find-us">How did you find us?</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <select name="find-us" id="find-us">
+                                <option value="friends" selected>Friends</option>
+                                <option value="search">Search engine</option>
+                                <option value="ad">Advertisement</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>Newsletter?</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="checkbox" name="news" id="news" checked> Yes, please
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col span-1-of-3">
                             <label>Drop us a line</label>
@@ -304,7 +357,26 @@
                 
             </div>
         </section>        
-
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
     <!-- START -- FOOTER - SECTION -->
         <footer>
@@ -318,14 +390,22 @@
             <div class="row">
    
                 <div class="col span-1-of-2">
+                    <ul class="footer-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Extra Credits</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="col span-1-of-2">
                     <ul class="social-links">
                         <li><a href="https://twitter.com/mdsgntweets" target="_blank"><i class="ion-social-twitter"></i></a></li>
                         <li><a href="https://www.instagram.com/gomdsgn/?hl=en" target="_blank"><i class="ion-social-instagram"></i></a></li>
-<!--                         <li><a href="#"><i class="ion-social-facebook"></i></a></li> -->
+                        <!-- <li><a href="#"><i class="ion-social-facebook"></i></a></li> -->
                     </ul>
                 </div>
             </div>
             <div class="row">
+                <p>ver. "Gettysburg"</p>
                 <p>Copyright &copy; 2018 by M|DSGN. All rights reserved.</p>
             </div>
         </footer>
