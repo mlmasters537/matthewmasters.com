@@ -274,9 +274,6 @@ input[type=submit]:active {
     color: #fff;
     }
 
-.btn btn-full {
-    margin: 300px;
-}
 
 /* ----------------------------------------------- */
 /* HEADER */
@@ -940,15 +937,16 @@ footer p {
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
-    background-color: #000;
+    background-color: #282828;
+/*    border: 1px solid #c4c4c4;*/
     }
 
 .portfolio-photo img {
-    opacity: 0.7;
+    opacity: 1;
     width: 100%;
     height: auto;
-    -webkit-transform: scale(1.15);
-    transform: scale(1.15);
+    -webkit-transform: scale(1.25);
+    transform: scale(1.25);
     -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
     transition: opacity 0.5s, -webkit-transform 0.5s;
     transition: transform 0.5s, opacity 0.5s;
@@ -957,9 +955,9 @@ footer p {
     }
 
 .portfolio-photo img:hover {
-    opacity: 1;
-    -webkit-transform: scale(1.04);
-    transform: scale(1.04);
+    opacity: 0.7;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
     }
 
 
