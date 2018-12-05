@@ -72,6 +72,36 @@
         <meta name="msapplication-config" content="/resources/favicons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
         
+    <script>
+        $(document).ready(function() {
+            $("#contact-form").submit(function(event) {
+                alert("Handler for .submit() called.");
+                event.preventDefault(); // Stop the submit
+
+                // Get the values to submit
+                var name = $("#name").val();
+                var email = $("#email").val();
+                var message = $("#message").val();
+                alert("name: " + name + "\nemail: " + email + "\nmessage: " + message);
+
+
+
+                // Make AJAX post with JSON data
+                $.post('email.php', { "name" : name, "email" : email, "message" : message, "submit" : "submit"})
+                .done(function(data) {
+                    // response holds JSON data in 'data' variable
+                    alert("data.success: " + data.success + '\n' + "data.message: " + data.message);
+                    if(data.success === "true") {
+                        alert("email was sent. Show modal");
+                    } else {
+		        alert("email was NOT sent. Show modal");
+                    }
+                }).fail(function(data) {
+                    alert("ERROR");
+                });
+            });
+        });
+    </script>
               
     </head>
     
@@ -264,7 +294,7 @@
 
         <section class="section-form" id="form">
             <div class="row">
-                <form method="post" action="mailer-new.php" class="contact-form">
+                <form id="contact-form" method="post" action="email.php" class="contact-form">
                     <div class="row">
                        
                         <div class="col span-1-of-3">
@@ -288,7 +318,7 @@
                             <label>Drop us a line</label>
                         </div>
                         <div class="col span-2-of-3">
-                            <textarea name="message" placeholder="Your message"></textarea>
+                            <textarea id="message" name="message" placeholder="Your message"></textarea>
                         </div>
                     </div>
                     <div class="row">
