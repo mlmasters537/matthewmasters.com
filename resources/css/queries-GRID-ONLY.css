@@ -82,10 +82,12 @@
         }
 
         .project1 img {
+/*
         -webkit-filter: none;
         -moz-filter: none;
         -ms-filter: none;
         filter: none;
+*/
         -webkit-transition: none;
         -moz-transition: none;
         -ms-transition: none;
@@ -104,7 +106,7 @@
         top: 50%;
         }   
 
-        .section-anchor1 {display: none;}
+/*        .section-anchor1 {display: none;}*/
 
         .aboutMeImage2{
             width: 65%;

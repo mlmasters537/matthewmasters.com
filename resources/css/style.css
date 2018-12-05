@@ -1,6 +1,8 @@
 /*
 font-family: 'Montserrat', sans-serif;
 font-family: 'Libre Baskerville', serif;
+    background-color: #121212;
+
 */
 
 
@@ -16,6 +18,8 @@ font-family: 'Libre Baskerville', serif;
 
 html,
 body {
+/*        background-color: #121212;*/
+
     background-color: #f8f8f8;
     color: #555;
 /*font-family: 'Montserrat', sans-serif;*/
@@ -43,10 +47,12 @@ body {
 .row {
     max-width: 1140px;
     margin: 0 auto;
+
     }
 
 section {
     padding: 30px 0;
+/*    background-color: #121212;*/
     }
 
 .box {
@@ -124,6 +130,39 @@ h4 {
     }
 
 
+
+/* ----------------------------------------------- */
+/* sections */
+/* ----------------------------------------------- */
+
+#section-one {
+    background-color: #120101;
+    padding-bottom: 60px;
+    }
+
+#aboutMe {
+    background-color: #120101;
+/*    background-color: #000000;*/
+}
+
+#darkgrey {
+    background-color: #262626;
+}
+
+#portfolio{
+    background-color: #212121;
+}
+
+#showcase {
+/*    background-color: #f8f8f8;*/
+    padding-top: 60px;
+}
+
+#advert {
+    background-color: #262626;
+}
+
+
 /* ----------------------------------------------- */
 /* PARAGRAPHS */
 /* ----------------------------------------------- */
@@ -132,6 +171,8 @@ h4 {
     line-height: 145%;
     width: 70%;
     margin-left: 15%;
+    letter-spacing: 0.025em;
+    word-spacing: 0.0015em;
     }
 
 .misc-copy {
@@ -199,6 +240,10 @@ h4 {
     font-weight: 900;
     color: #ba2615;
     }
+
+.whiteTXT {
+    color:#f8f8f8;
+}
 
 
 /* ----------------------------------------------- */
@@ -280,8 +325,8 @@ input[type=submit]:active {
 /* ----------------------------------------------- */
 
 #homeheader {
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(img/HeaderCoverImage.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(img/HeaderCoverImage.jpg);
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(img/HeaderCoverImage3.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(img/HeaderCoverImage3.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -550,7 +595,8 @@ input[type=checkbox] {
 /* ----------------------------------------------- */
 
 footer {
-    background-color: #333;
+    background-color: #120101;
+/*    background-color: #333;*/
     padding: 10px 50px 50px 50px;
     font-size: 80%;
     }
@@ -674,7 +720,7 @@ footer p {
     margin-left: auto;
     margin-right: auto;
     width: 98%;
-    margin-bottom: 20px;
+/*    margin-bottom: 20px;*/
     }
 
 .aboutMeImage2 {
@@ -693,6 +739,24 @@ footer p {
     margin-bottom: 20px;
     }
 
+.aboutMeImage4 {
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+/*    margin-bottom: 20px;*/
+    }
+
+.aboutMeImage5 {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+/*    margin-bottom: 20px;*/
+    }
 
 /* ----------------------------------------------- */
 /* Animations */
@@ -829,13 +893,24 @@ footer p {
     overflow: hidden;
     }
 
+
 .project1 img {
     opacity: 1;
     width: 110%;
-    height: auto;
+/*    height: auto;*/
+    
+/*
+    display: block;
+    margin: auto;   
+*/
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    
     filter: grayscale(100%);
-    -webkit-transform: scale(1.15);
-    transform: scale(1.15);
+/*    -webkit-transform: scale(1.15);*/
+/*    transform: scale(1.15);*/
     -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
     transition: opacity 0.5s, -webkit-transform 0.5s;
     transition: transform 0.5s, opacity 0.5s;
@@ -848,8 +923,8 @@ footer p {
    -moz-filter: none;
    -ms-filter: none;
    filter: none;
-    -webkit-transform: scale(1.25);
-    transform: scale(1.25);
+/*    -webkit-transform: scale(1.25);*/
+/*    transform: scale(1.25);*/
     }
 
 
@@ -909,7 +984,8 @@ footer p {
 /* ----------------------------------------------- */
 
 #portfolio {
-    margin-bottom: 60px;
+    padding-bottom: 70px;
+/*    margin-bottom: 60px;*/
     }
 
 .portfolio-showcase {
