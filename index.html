@@ -75,14 +75,14 @@
     <script>
         $(document).ready(function() {
             $("#contact-form").submit(function(event) {
-                alert("Handler for .submit() called.");
+//                alert("Handler for .submit() called.");
                 event.preventDefault(); // Stop the submit
 
                 // Get the values to submit
                 var name = $("#name").val();
                 var email = $("#email").val();
                 var message = $("#message").val();
-                alert("name: " + name + "\nemail: " + email + "\nmessage: " + message);
+//                alert("name: " + name + "\nemail: " + email + "\nmessage: " + message);
 
 
 
@@ -90,16 +90,31 @@
                 $.post('email.php', { "name" : name, "email" : email, "message" : message, "submit" : "submit"})
                 .done(function(data) {
                     // response holds JSON data in 'data' variable
-                    alert("data.success: " + data.success + '\n' + "data.message: " + data.message);
+//                    alert("data.success: " + data.success + '\n' + "data.message: " + data.message);
                     if(data.success === "true") {
-                        alert("email was sent. Show modal");
+//                        alert("email was sent. Show modal");
+                        $('#foo').show();
                     } else {
-		        alert("email was NOT sent. Show modal");
+                        $('#errfoo').show();
+//		              alert("email was NOT sent. Show modal");
                     }
                 }).fail(function(data) {
-                    alert("ERROR");
+//                    alert("ERROR");
                 });
             });
+            
+            $( "#modalCloseBtn" ).click(function() {
+//                alert( "Handler for .click() called." );
+                $('#foo').hide();
+                $('#contact-form').trigger("reset");
+            });
+            
+            $( "#errmodalCloseBtn" ).click(function() {
+//                alert( "Handler for .click() called." );
+                $('#errfoo').hide();
+                $('#contact-form').trigger("reset");
+            });   
+            
         });
     </script>
               
@@ -272,7 +287,7 @@
 
    
     <!-- START -- WHO_AM_I_BODYCOPY - SECTION -->
-        <section class="section">
+        <section class="section" id="contact">
             <div class="row">
                 <div class="text-container">
                         <h4>Who Am I</h4>
@@ -293,6 +308,9 @@
     <!-- END -- WHO_AM_I_BODYCOPY - SECTION -->
 
         <section class="section-form" id="form">
+           <div id="foo"><p class="long-copy">this is a modal test</p> 
+           <button type="button" id="modalCloseBtn">Click Me!</button>
+           </div>
             <div class="row">
                 <form id="contact-form" method="post" action="email.php" class="contact-form">
                     <div class="row">
