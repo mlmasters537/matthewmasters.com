@@ -93,28 +93,20 @@
 //                    alert("data.success: " + data.success + '\n' + "data.message: " + data.message);
                     if(data.success === "true") {
 //                        alert("email was sent. Show modal");
-                        $('#foo').show();
+                        $('#ModalSuccessBox').show();
+                                        $('#contact-form').trigger("reset");
+
                     } else {
-                        $('#errfoo').show();
+                        $('#ModalErrorBox').show();
+                                        $('#contact-form').trigger("reset");
+
 //		              alert("email was NOT sent. Show modal");
                     }
                 }).fail(function(data) {
 //                    alert("ERROR");
                 });
             });
-            
-            $( "#modalCloseBtn" ).click(function() {
-//                alert( "Handler for .click() called." );
-                $('#foo').hide();
-                $('#contact-form').trigger("reset");
-            });
-            
-            $( "#errmodalCloseBtn" ).click(function() {
-//                alert( "Handler for .click() called." );
-                $('#errfoo').hide();
-                $('#contact-form').trigger("reset");
-            });   
-            
+
         });
     </script>
               
@@ -171,6 +163,7 @@
                     </div>
                 </div>
             </div>
+  
         </section>        
         <!-- END -- What is M|DSGN? - SECTION -->
 
@@ -308,9 +301,7 @@
     <!-- END -- WHO_AM_I_BODYCOPY - SECTION -->
 
         <section class="section-form" id="form">
-           <div id="foo"><p class="long-copy">this is a modal test</p> 
-           <button type="button" id="modalCloseBtn">Click Me!</button>
-           </div>
+           
             <div class="row">
                 <form id="contact-form" method="post" action="email.php" class="contact-form">
                     <div class="row">
@@ -348,6 +339,25 @@
                         </div>
                     </div>
                     
+                    <div class="row">
+<!--                        <div class="col span-1-of-2">-->
+
+                            <div id="ModalSuccessBox">
+                                <p class="modal-copy">message delivered!</p> 
+<!--                                <button type="button" id="modalCloseBtn">dismiss</button>-->
+                            </div>
+                            
+                            <div id="ModalErrorBox">
+                                <p class="modal-copy">Error! Try Again!</p> 
+<!--                                <button type="button" id="modalCloseBtn" value="dismiss" >Click Me!</button>-->
+                            </div>
+                            
+                            
+<!--                        </div>-->
+                        
+                   
+                    </div>
+                            
                 </form>
                 
             </div>

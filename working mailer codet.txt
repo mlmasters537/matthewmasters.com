@@ -1,0 +1,54 @@
+
+
+
+
+
+
+
+
+
+    <script>
+        $(document).ready(function() {
+            $("#contact-form").submit(function(event) {
+//                alert("Handler for .submit() called.");
+                event.preventDefault(); // Stop the submit
+
+                // Get the values to submit
+                var name = $("#name").val();
+                var email = $("#email").val();
+                var message = $("#message").val();
+//                alert("name: " + name + "\nemail: " + email + "\nmessage: " + message);
+
+
+
+                // Make AJAX post with JSON data
+                $.post('email.php', { "name" : name, "email" : email, "message" : message, "submit" : "submit"})
+                .done(function(data) {
+                    // response holds JSON data in 'data' variable
+//                    alert("data.success: " + data.success + '\n' + "data.message: " + data.message);
+                    if(data.success === "true") {
+//                        alert("email was sent. Show modal");
+                        $('#ModalSuccessBox').show();
+                    } else {
+                        $('#ModalErrorBox').show();
+//                    alert("email was NOT sent. Show modal");
+                    }
+                }).fail(function(data) {
+//                    alert("ERROR");
+                });
+            });
+            
+            $( "#modalCloseBtn" ).click(function() {
+//                alert( "Handler for .click() called." );
+                $('#ModalSuccessBox').hide();
+                $('#contact-form').trigger("reset");
+            });
+            
+            $( "#errmodalCloseBtn" ).click(function() {
+//                alert( "Handler for .click() called." );
+                $('#ModalErrorBox').hide();
+                $('#contact-form').trigger("reset");
+            });   
+            
+        });
+    </script>
